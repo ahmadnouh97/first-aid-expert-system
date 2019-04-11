@@ -55,7 +55,6 @@ class DRSABCD(KnowledgeEngine):
         self.performCPR()
         self.onComplete()
 
-
     def startEngine(self):
         instructions.append("Ensure the area is safe for yourself, others and the casualty")
         self.checkForResponse()
