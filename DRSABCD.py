@@ -47,13 +47,14 @@ class DRSABCD(KnowledgeEngine):
     @Rule(Breathing('normal'))
     def normalBreathing(self):
         instructions.append("Place in recovery position, monitor breathing and responsiveness.")
-        printInstructions()
+        self.onComplete()
 
     @Rule(Breathing('abnormal'))
     def abnormalBreathing(self):
         instructions.append("Place on back and commence CPR.")
         self.performCPR()
-        printInstructions()
+        self.onComplete()
+
 
     def startEngine(self):
         instructions.append("Ensure the area is safe for yourself, others and the casualty")

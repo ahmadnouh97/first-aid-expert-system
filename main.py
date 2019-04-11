@@ -12,18 +12,28 @@ class Case(Fact):
     pass
 
 
+def onComplete():
+    printInstructions()
+
 
 # Engine - Start
 
 class MainEngine(KnowledgeEngine):
+
     @Rule(Case(CASE_DRSABCD))
     def startDRSABCD(self):
-        DRSABCD().startEngine()
+        subEngine = DRSABCD()
+        subEngine.onComplete = onComplete
+        subEngine.startEngine()
 
     def startEngine(self):
         self.reset()
         self.declare(Case(input(f"Choose case: ({CASE_DRSABCD})\n")))
         self.run()
+
+    @Rule(NOT(Case(CASE_DRSABCD)))
+    def default(self):
+        print("Error, exiting")
 
     pass
 
