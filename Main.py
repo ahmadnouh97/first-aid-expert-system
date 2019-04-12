@@ -1,11 +1,17 @@
 from sub_systems.DRSABCD import *
 from sub_systems.InsectBite import *
+from sub_systems.AsthmaAttack import *
+from sub_systems.BlueRingedBites import *
+from sub_systems.Burns import *
 from Data import *
 
 # Facts - Start
 
 CASE_DRSABCD = "DRSABCD"
 CASE_INSECT_BITE = "Insect Bite"
+ASTHMA_ATTACK = "Asthma Attack"
+BLUE_RINGED_BITES = "Blue Ringed Bites"
+BURNS = "Burns and Scalds"
 
 
 # Facts - End
@@ -43,6 +49,7 @@ class MainEngine(KnowledgeEngine):
     def default(self):
         # print("Error, exiting")
         pass
+
     pass
 
 
