@@ -2,7 +2,10 @@ from sub_systems.DRSABCD import *
 from sub_systems.InsectBite import *
 from sub_systems.AsthmaAttack import *
 from sub_systems.BlueRingedBites import *
+from sub_systems.ColdInducedCondition import *
+from sub_systems.DiabetesInducedEmergency import *
 from sub_systems.Burns import *
+from sub_systems.Dislocation import *
 from Data import *
 
 # Facts - Start
@@ -37,6 +40,24 @@ class MainEngine(KnowledgeEngine):
     @Rule(Case("2"))
     def startInsectBite(self):
         engine = InsectBite()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("3"))
+    def startColdInducedCondition(self):
+        engine = ColdInducedCondition()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("4"))
+    def startDiabtes(self):
+        engine = DiabetesInducedEmergency()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("5"))
+    def startDisLocation(self):
+        engine = Dislocation()
         engine.onComplete = onComplete
         engine.startEngine()
 
