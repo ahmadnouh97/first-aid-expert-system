@@ -4,7 +4,9 @@ from sub_systems.NonTropicalJellyfishStings import *
 from sub_systems.Poisoning import *
 from sub_systems.SeizuresAndEpilepsy import *
 from sub_systems.SevereAllergicReaction import *
+from sub_systems.SevereBleeding import *
 from sub_systems.RedBackSpiderBite import *
+from sub_systems.Shock import *
 
 # Facts - Start
 
@@ -16,6 +18,8 @@ CASE_POISONING = "Poisoning"
 CASE_RED_BACK_SPIDER_BITE = "Red-Back Spider Bite"
 CASE_SEIZURES_AND_EPILEPSY = "Seizures And Epilepsy"
 CASE_SEVERE_ALLERGIC_REACTION = "Severe Allergic Reaction"
+CASE_SEVERE_BLEEDING = "Severe Bleeding"
+CASE_SHOCK = "Shock"
 ASTHMA_ATTACK = "Asthma Attack"
 BLUE_RINGED_BITES = "Blue Ringed Bites"
 BURNS = "Burns and Scalds"
@@ -83,6 +87,18 @@ class MainEngine(KnowledgeEngine):
         engine.onComplete = onComplete
         engine.startEngine()
 
+    @Rule(Case("9"))
+    def startSevereBleeding(self):
+        engine = SevereBleeding()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("10"))
+    def startShock(self):
+        engine = Shock()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
     def startEngine(self):
         self.reset()
         self.declare(Case(input(f"Choose case: (1- {CASE_DRSABCD},"
@@ -92,7 +108,9 @@ class MainEngine(KnowledgeEngine):
                                 f" 5- {CASE_POISONING},"
                                 f" 6- {CASE_RED_BACK_SPIDER_BITE},"
                                 f" 7- {CASE_SEIZURES_AND_EPILEPSY},"
-                                f" 8- {CASE_SEVERE_ALLERGIC_REACTION})\n")))
+                                f" 8- {CASE_SEVERE_ALLERGIC_REACTION},"
+                                f" 9- {CASE_SEVERE_BLEEDING},"
+                                f" 10- {CASE_SHOCK})\n")))
         self.run()
 
     @Rule(NOT(Case(CASE_DRSABCD) & Case(CASE_INSECT_BITE)))
