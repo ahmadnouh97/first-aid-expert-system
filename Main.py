@@ -7,6 +7,11 @@ from sub_systems.SevereAllergicReaction import *
 from sub_systems.SevereBleeding import *
 from sub_systems.RedBackSpiderBite import *
 from sub_systems.Shock import *
+from sub_systems.SnakeBite import *
+from sub_systems.SpinalInjury import *
+from sub_systems.SprainsAndStrains import *
+from sub_systems.Stroke import *
+from sub_systems.TropicalJellyfishStings import *
 
 # Facts - Start
 
@@ -20,6 +25,11 @@ CASE_SEIZURES_AND_EPILEPSY = "Seizures And Epilepsy"
 CASE_SEVERE_ALLERGIC_REACTION = "Severe Allergic Reaction"
 CASE_SEVERE_BLEEDING = "Severe Bleeding"
 CASE_SHOCK = "Shock"
+CASE_SNAKE_BITE = "Snake Bite"
+CASE_SPINAL_INJURY = "Spinal Injury"
+CASE_SPRAINS_AND_STRAINS = "Sprains And Strains"
+CASE_STROKE = "Stroke"
+CASE_TROPICAL_JELLYFISH_STINGS = "Tropical Jellyfish Stings"
 ASTHMA_ATTACK = "Asthma Attack"
 BLUE_RINGED_BITES = "Blue Ringed Bites"
 BURNS = "Burns and Scalds"
@@ -99,6 +109,36 @@ class MainEngine(KnowledgeEngine):
         engine.onComplete = onComplete
         engine.startEngine()
 
+    @Rule(Case("11"))
+    def startSnakeBite(self):
+        engine = SnakeBite()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("12"))
+    def startSpinalInjury(self):
+        engine = SpinalInjury()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("13"))
+    def startSpinalInjury(self):
+        engine = SprainsAndStrains()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("14"))
+    def startStroke(self):
+        engine = Stroke()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("15"))
+    def startTropicalJellyfishStings(self):
+        engine = TropicalJellyfishStings()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
     def startEngine(self):
         self.reset()
         self.declare(Case(input(f"Choose case: (1- {CASE_DRSABCD},"
@@ -110,7 +150,12 @@ class MainEngine(KnowledgeEngine):
                                 f" 7- {CASE_SEIZURES_AND_EPILEPSY},"
                                 f" 8- {CASE_SEVERE_ALLERGIC_REACTION},"
                                 f" 9- {CASE_SEVERE_BLEEDING},"
-                                f" 10- {CASE_SHOCK})\n")))
+                                f" 10- {CASE_SHOCK},\n"
+                                f" 11- {CASE_SNAKE_BITE},"
+                                f" 12- {CASE_SPINAL_INJURY},"
+                                f" 13- {CASE_SPRAINS_AND_STRAINS},"
+                                f" 14- {CASE_STROKE},"
+                                f" 15- {CASE_TROPICAL_JELLYFISH_STINGS})\n")))
         self.run()
 
     @Rule(NOT(Case(CASE_DRSABCD) & Case(CASE_INSECT_BITE)))
