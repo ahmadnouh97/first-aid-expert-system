@@ -6,6 +6,13 @@ from sub_systems.ColdInducedCondition import *
 from sub_systems.DiabetesInducedEmergency import *
 from sub_systems.Burns import *
 from sub_systems.Dislocation import *
+from sub_systems.ElectricShock import *
+from sub_systems.EyeInjuries import *
+from sub_systems.Chocking import *
+from sub_systems.Fractures import *
+from sub_systems.HeartAttack import *
+from sub_systems.HeadInjuries import *
+from sub_systems.HeatInducedConditions import *
 from Data import *
 
 # Facts - Start
@@ -58,6 +65,48 @@ class MainEngine(KnowledgeEngine):
     @Rule(Case("5"))
     def startDisLocation(self):
         engine = Dislocation()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("6"))
+    def startElectricShock(self):
+        engine = ElectricShock()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("7"))
+    def startEyeInjuries(self):
+        engine = EyeInjuries()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("8"))
+    def startChocking(self):
+        engine = Chocking()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("9"))
+    def startFractures(self):
+        engine = Fractures()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("10"))
+    def startHeartAttack(self):
+        engine = HeartAttack()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("11"))
+    def startHeadInjuries(self):
+        engine = HeadInjuries()
+        engine.onComplete = onComplete
+        engine.startEngine()
+
+    @Rule(Case("12"))
+    def startHeatInducedConditions(self):
+        engine = HeatInducedConditions()
         engine.onComplete = onComplete
         engine.startEngine()
 
