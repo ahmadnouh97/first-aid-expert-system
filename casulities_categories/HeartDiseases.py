@@ -1,8 +1,9 @@
-from Casualty import *
-from Symptom import *
+from models.Casualty import *
+from models.Symptom import *
 
 
 class HeartDiseases(KnowledgeEngine):
+    SYMPTOMS = []
     CASUALTIES = [
         Casualty(name='shock',
                  symptoms=[
@@ -42,9 +43,12 @@ class HeartDiseases(KnowledgeEngine):
                      Symptom(name='cardiac_arrest', displayValue='May collapse and suffer a cardiac arrest.')
                  ]),
     ]
+    userSymptoms = []
 
     def __init__(self):
         super(HeartDiseases, self).__init__()
+        self.SYMPTOMS = self.init_symptoms()
+        self.userSymptoms = []
 
     @Rule(MySymptom(symptom='symptom' << W()))
     def update(self, symptom: str):
@@ -54,3 +58,32 @@ class HeartDiseases(KnowledgeEngine):
         for casualty in self.CASUALTIES:
             if my_symptom in [symptom.name for symptom in casualty.symptoms]:
                 casualty.increaseProbability()
+
+    def init_symptoms(self):
+        mySet = set()
+        for casualty in self.CASUALTIES:
+            for symptom in casualty.symptoms:
+                mySet.add(symptom)
+
+        return list(mySet)
+
+    def displaySymptoms(self):
+        # display symptoms to the user
+        print('symptoms:\n')
+        for i, symptom in enumerate(self.SYMPTOMS):
+            print(f'{i + 1} - {symptom.displayValue}')
+
+        # read user input
+        userInputs = input('What are the casualty symptoms ?\n').split()
+
+        # the symptoms those user choose
+        self.userSymptoms = [self.SYMPTOMS[int(index) - 1] for index in userInputs]
+        for symptom in self.userSymptoms:
+            print(f'{symptom.displayValue}\n')
+
+    def startEngine(self):
+        self.displaySymptoms()
+        self.reset()
+        for symptom in self.userSymptoms:
+            self.declare(symptom.name)
+        self.run()
