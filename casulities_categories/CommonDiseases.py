@@ -152,5 +152,16 @@ class CommonDiseases(KnowledgeEngine):
         self.displaySymptoms()
         self.reset()
         for symptom in self.userSymptoms:
-            self.declare(symptom.name)
+            self.declare(MySymptom(symptom=symptom.name))
         self.run()
+        self.onComplete()
+
+    def onComplete(self):
+        maxProbability = -1
+        maxCasualty = -1
+        for casualty in self.CASUALTIES:
+            print(f'{casualty.name}: {casualty.probability}\n')
+            if casualty.probability > maxProbability:
+                maxProbability = casualty.probability
+                maxCasualty = casualty
+        print(f'Most probability: {maxCasualty.name} with {maxProbability}')

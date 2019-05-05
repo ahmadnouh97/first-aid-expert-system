@@ -17,30 +17,34 @@ class Case(Fact):
 
 
 class SymptomsEngine(KnowledgeEngine):
+    def __init__(self):
+        super().__init__()
+        self.subEngine = super()
+
     @Rule(Case('1'))
     def bonesAndMuscles(self):
-        engine = BonesAndMuscles()
-        engine.startEngine()
+        self.subEngine = BonesAndMuscles()
+        self.subEngine.startEngine()
 
     @Rule(Case('2'))
     def burns(self):
-        engine = BurnsCasualties()
-        engine.startEngine()
+        self.subEngine = BurnsCasualties()
+        self.subEngine.startEngine()
 
     @Rule(Case('3'))
     def heartDiseases(self):
-        engine = HeartDiseases()
-        engine.startEngine()
+        self.subEngine = HeartDiseases()
+        self.subEngine.startEngine()
 
     @Rule(Case('4'))
     def stingsAndBites(self):
-        engine = StingsAndBites()
-        engine.startEngine()
+        self.subEngine = StingsAndBites()
+        self.subEngine.startEngine()
 
     @Rule(Case('5'))
     def commonDiseases(self):
-        engine = CommonDiseases()
-        engine.startEngine()
+        self.subEngine = CommonDiseases()
+        self.subEngine.startEngine()
 
     def startEngine(self):
         self.reset()

@@ -111,6 +111,7 @@ class StingsAndBites(KnowledgeEngine):
         self.updateCasualties(symptom)
 
     def updateCasualties(self, my_symptom: str):
+        # increase the probability of each casualty that contains this symptom
         for casualty in self.CASUALTIES:
             if my_symptom in [symptom.name for symptom in casualty.symptoms]:
                 casualty.increaseProbability()
@@ -134,12 +135,23 @@ class StingsAndBites(KnowledgeEngine):
 
         # the symptoms those user choose
         self.userSymptoms = [self.SYMPTOMS[int(index) - 1] for index in userInputs]
-        for symptom in self.userSymptoms:
-            print(f'{symptom.displayValue}\n')
+        # for symptom in self.userSymptoms:
+        #     print(f'{symptom.displayValue}\n')
 
     def startEngine(self):
         self.displaySymptoms()
         self.reset()
         for symptom in self.userSymptoms:
-            self.declare(symptom.name)
+            self.declare(MySymptom(symptom=symptom.name))
         self.run()
+        self.onComplete()
+
+    def onComplete(self):
+        maxProbability = -1
+        maxCasualty = -1
+        for casualty in self.CASUALTIES:
+            print(f'{casualty.name}: {casualty.probability}\n')
+            if casualty.probability > maxProbability:
+                maxProbability = casualty.probability
+                maxCasualty = casualty
+        print(f'Most probability: {maxCasualty.name} with {maxProbability}')
