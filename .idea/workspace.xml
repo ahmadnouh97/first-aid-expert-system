@@ -4,11 +4,6 @@
     <list default="true" id="a7b468df-700b-4d47-b03c-eb33b4ea472a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/casulities_categories/BonesAndMuscles.py" beforeDir="false" afterPath="$PROJECT_DIR$/casulities_categories/BonesAndMuscles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casulities_categories/BurnsCasualties.py" beforeDir="false" afterPath="$PROJECT_DIR$/casulities_categories/BurnsCasualties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casulities_categories/CommonDiseases.py" beforeDir="false" afterPath="$PROJECT_DIR$/casulities_categories/CommonDiseases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casulities_categories/HeartDiseases.py" beforeDir="false" afterPath="$PROJECT_DIR$/casulities_categories/HeartDiseases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casulities_categories/StingsAndBites.py" beforeDir="false" afterPath="$PROJECT_DIR$/casulities_categories/StingsAndBites.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sub_engines/SymptomsEngine.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_engines/SymptomsEngine.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,18 +16,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/casulities_categories/StingsAndBites.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="156" column="76" lean-forward="true" selection-start-line="156" selection-start-column="76" selection-end-line="156" selection-end-column="76" />
+            <state relative-caret-position="1127">
+              <caret line="156" column="76" selection-start-line="156" selection-start-column="76" selection-end-line="156" selection-end-column="76" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
                 <element signature="e#135#6778#0" />
                 <element signature="e#6834#6948#0" />
-                <element signature="e#7050#7080#0" />
                 <element signature="e#7130#7366#0" />
                 <element signature="e#7405#7568#0" />
-                <element signature="e#7609#8090#0" />
-                <element signature="e#8127#8296#0" />
-                <element signature="e#8314#8626#0" />
               </folding>
             </state>
           </provider>
@@ -42,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -50,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sub_engines/CasualtiesEngine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
+            <state relative-caret-position="4623">
+              <caret line="228" selection-start-line="228" selection-end-line="228" />
             </state>
           </provider>
         </entry>
@@ -59,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Symptom.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="345">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -68,11 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/casulities_categories/BurnsCasualties.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
+            <state relative-caret-position="1380">
               <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-              <folding>
-                <element signature="e#2317#2460#0" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -80,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="74">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -92,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sub_engines/SymptomsEngine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+            <state relative-caret-position="115">
+              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -104,39 +92,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/casulities_categories/CommonDiseases.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="151" column="30" lean-forward="true" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/casulities_categories/BonesAndMuscles.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
-              <folding>
-                <element signature="e#136#3891#0" />
-                <element signature="e#4440#4603#0" />
-                <element signature="e#4644#5125#0" />
-                <element signature="e#5162#5305#0" />
-                <element signature="e#5345#5718#0" />
-              </folding>
+            <state relative-caret-position="3450">
+              <caret line="151" column="30" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/casulities_categories/BonesAndMuscles.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="90" column="71" selection-start-line="90" selection-start-column="71" selection-end-line="90" selection-end-column="71" />
+              <folding>
+                <element signature="e#136#3891#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/casulities_categories/HeartDiseases.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="99" column="76" lean-forward="true" selection-start-line="99" selection-start-column="76" selection-end-line="99" selection-end-column="76" />
+            <state relative-caret-position="115">
+              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding>
-                <element signature="e#2978#3135#0" />
-                <element signature="e#3174#3337#0" />
-                <element signature="e#3378#3859#0" />
-                <element signature="e#3896#4039#0" />
-                <element signature="e#4083#4456#0" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,13 +197,13 @@
         <option value="$PROJECT_DIR$/Symptom.py" />
         <option value="$PROJECT_DIR$/sub_engines/CasultiesEngine.py" />
         <option value="$PROJECT_DIR$/sub_engines/CasualtiesEngine.py" />
-        <option value="$PROJECT_DIR$/sub_engines/SymptomsEngine.py" />
         <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/casulities_categories/StingsAndBites.py" />
         <option value="$PROJECT_DIR$/casulities_categories/HeartDiseases.py" />
         <option value="$PROJECT_DIR$/casulities_categories/CommonDiseases.py" />
         <option value="$PROJECT_DIR$/casulities_categories/BurnsCasualties.py" />
+        <option value="$PROJECT_DIR$/sub_engines/SymptomsEngine.py" />
         <option value="$PROJECT_DIR$/casulities_categories/BonesAndMuscles.py" />
       </list>
     </option>
@@ -397,7 +377,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49753696" visible="true" weight="0.24330357" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49753696" visible="true" weight="0.24330357" />
       <window_info id="Structure" order="1" sideWeight="0.50246304" side_tool="true" weight="0.24330357" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -408,7 +388,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.8632479" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.25982907" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2735043" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50074404" side_tool="true" weight="0.41734862" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32991454" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -695,13 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sub_engines/CasualtiesEngine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pyknow/engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -709,99 +682,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
+    <entry file="file://$PROJECT_DIR$/casulities_categories/StingsAndBites.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="1127">
+          <caret line="156" column="76" selection-start-line="156" selection-start-column="76" selection-end-line="156" selection-end-column="76" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#135#6778#0" />
+            <element signature="e#6834#6948#0" />
+            <element signature="e#7130#7366#0" />
+            <element signature="e#7405#7568#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Symptom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/casulities_categories/CommonDiseases.py">
+    <entry file="file://$PROJECT_DIR$/sub_engines/CasualtiesEngine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="151" column="30" lean-forward="true" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+        <state relative-caret-position="4623">
+          <caret line="228" selection-start-line="228" selection-end-line="228" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Symptom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/casulities_categories/BurnsCasualties.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="1380">
           <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/casulities_categories/CommonDiseases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3450">
+          <caret line="151" column="30" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/casulities_categories/HeartDiseases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
-            <element signature="e#2317#2460#0" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/casulities_categories/BonesAndMuscles.py">
+    <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+        <state relative-caret-position="74">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <element signature="e#136#3891#0" />
-            <element signature="e#4440#4603#0" />
-            <element signature="e#4644#5125#0" />
-            <element signature="e#5162#5305#0" />
-            <element signature="e#5345#5718#0" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sub_engines/SymptomsEngine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+        <state relative-caret-position="115">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/casulities_categories/StingsAndBites.py">
+    <entry file="file://$PROJECT_DIR$/casulities_categories/BonesAndMuscles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="156" column="76" lean-forward="true" selection-start-line="156" selection-start-column="76" selection-end-line="156" selection-end-column="76" />
+        <state relative-caret-position="252">
+          <caret line="90" column="71" selection-start-line="90" selection-start-column="71" selection-end-line="90" selection-end-column="71" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <element signature="e#135#6778#0" />
-            <element signature="e#6834#6948#0" />
-            <element signature="e#7050#7080#0" />
-            <element signature="e#7130#7366#0" />
-            <element signature="e#7405#7568#0" />
-            <element signature="e#7609#8090#0" />
-            <element signature="e#8127#8296#0" />
-            <element signature="e#8314#8626#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/casulities_categories/HeartDiseases.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="99" column="76" lean-forward="true" selection-start-line="99" selection-start-column="76" selection-end-line="99" selection-end-column="76" />
-          <folding>
-            <element signature="e#2978#3135#0" />
-            <element signature="e#3174#3337#0" />
-            <element signature="e#3378#3859#0" />
-            <element signature="e#3896#4039#0" />
-            <element signature="e#4083#4456#0" />
+            <element signature="e#136#3891#0" />
           </folding>
         </state>
       </provider>
