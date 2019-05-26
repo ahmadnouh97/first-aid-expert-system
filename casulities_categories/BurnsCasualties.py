@@ -1,5 +1,11 @@
 from models.Casualty import *
 from models.Symptom import *
+from sub_systems.Burns import *
+from Data import *
+
+
+def onComplete():
+    printInstructions()
 
 
 class BurnsCasualties(KnowledgeEngine):
@@ -11,7 +17,8 @@ class BurnsCasualties(KnowledgeEngine):
                      Symptom(name='pain_at_site', displayValue='Pain at burn site.'),
                      Symptom(name='may_blister', displayValue='May blister.'),
                      Symptom(name='swelling', displayValue='Swelling.'),
-                 ]),
+                 ],
+                 engine=Burns()),
 
         Casualty(name='deep_burn_or_scald',
                  symptoms=[
@@ -19,7 +26,8 @@ class BurnsCasualties(KnowledgeEngine):
                      Symptom(name='no_pain', displayValue='No pain where nerve endings have been destroyed.'),
                      Symptom(name='surrounded_by_superficial_burns', displayValue='Usually surrounded by superficial '
                                                                                   'burns.')
-                 ])
+                 ],
+                 engine=Burns())
     ]
     userSymptoms = []
 
@@ -76,3 +84,5 @@ class BurnsCasualties(KnowledgeEngine):
                 maxProbability = casualty.probability
                 maxCasualty = casualty
         print(f'Most probability: {maxCasualty.name} with {maxProbability}')
+        maxCasualty.engine.onComplete = onComplete
+        maxCasualty.engine.startEngine()

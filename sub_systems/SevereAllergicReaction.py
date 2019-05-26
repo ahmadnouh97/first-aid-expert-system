@@ -41,9 +41,9 @@ class SevereAllergicReaction(KnowledgeEngine):
     def checkAdrenalineInjector(self):
         instructions.append('DO NOT allow them to stand or walk.')
         self.reset()
-        self.declare(Breathing(input('Does the casualty carry an adrenaline auto-injector?\n'
-                                     '1- Yes\n'
-                                     '2- No\n')))
+        self.declare(AdrenalineInjector(input('Does the casualty carry an adrenaline auto-injector?\n'
+                                              '1- Yes\n'
+                                              '2- No\n')))
         self.run()
 
     @Rule(AdrenalineInjector('1'))

@@ -1,5 +1,16 @@
 from models.Casualty import *
 from models.Symptom import *
+from sub_systems.AsthmaAttack import *
+from sub_systems.SeizuresAndEpilepsy import *
+from sub_systems.SevereAllergicReaction import *
+from sub_systems.ColdInducedCondition import *
+from sub_systems.HeatInducedConditions import *
+from sub_systems.DiabetesInducedEmergency import *
+from Data import *
+
+
+def onComplete():
+    printInstructions()
 
 
 class CommonDiseases(KnowledgeEngine):
@@ -12,7 +23,8 @@ class CommonDiseases(KnowledgeEngine):
                      Symptom(name='shortness_breathing', displayValue='Difficulty breathing, shortness of breath.'),
                      Symptom(name='difficulty_speaking', displayValue='Only able to speak in short sentences.'),
                      Symptom(name='chest_tightness', displayValue='Chest tightness.')
-                 ]),
+                 ],
+                 engine=AsthmaAttack()),
 
         Casualty(name='seizures_and_epilepsy',
                  symptoms=[
@@ -29,7 +41,8 @@ class CommonDiseases(KnowledgeEngine):
                      Symptom(name='changes_in_conscious', displayValue='Changes in conscious state from being fully '
                                                                        'alert to confused, drowsy or loss of '
                                                                        'consciousness.')
-                 ]),
+                 ],
+                 engine=SeizuresAndEpilepsy()),
 
         Casualty(name='severe_allergic_reaction',
                  symptoms=[
@@ -46,7 +59,8 @@ class CommonDiseases(KnowledgeEngine):
                      Symptom(name='abdominal_pain', displayValue='Abdominal pain.'),
                      Symptom(name='vomiting', displayValue='Vomiting.'),
                      Symptom(name='Hives_welts_and_body_redness', displayValue='Hives, welts and body redness.')
-                 ]),
+                 ],
+                 engine=SevereAllergicReaction()),
 
         Casualty(name='cold_induced_condition',
                  symptoms=[
@@ -59,7 +73,8 @@ class CommonDiseases(KnowledgeEngine):
                      Symptom(name='low_consciousness', displayValue='Level of consciousness continues to decline.'),
                      Symptom(name='unconsciousness', displayValue='Unconsciousness.'),
                      Symptom(name='cardiac_arrest', displayValue='Cardiac arrest may occur.')
-                 ]),
+                 ],
+                 engine=ColdInducedCondition()),
 
         Casualty(name='heat_induced_conditions_stroke',
                  symptoms=[
@@ -76,7 +91,8 @@ class CommonDiseases(KnowledgeEngine):
                      Symptom(name='faintness', displayValue='Faintness.'),
                      Symptom(name='altered_mental_state', displayValue='Altered mental state which may progress to '
                                                                        'seizures unconsciousness/death.')
-                 ]),
+                 ],
+                 engine=HeatInducedConditions()),
 
         Casualty(name='heat_induced_conditions_stroke_exhaustion',
                  symptoms=[
@@ -88,7 +104,8 @@ class CommonDiseases(KnowledgeEngine):
                      Symptom(name='shortness_breathing', displayValue='Shortness of breath.'),
                      Symptom(name='pale', displayValue='Pale.'),
                      Symptom(name='cool_clammy_skin', displayValue='Cool clammy skin.')
-                 ]),
+                 ],
+                 engine=HeatInducedConditions()),
 
         Casualty(name='low_blood_sugar',
                  symptoms=[
@@ -98,7 +115,8 @@ class CommonDiseases(KnowledgeEngine):
                      Symptom(name='weakness', displayValue='Weak.'),
                      Symptom(name='confused', displayValue='Confused.'),
                      Symptom(name='aggressive', displayValue='Irritable or aggressive.')
-                 ]),
+                 ],
+                 engine=DiabetesInducedEmergency()),
 
         Casualty(name='high_blood_sugar',
                  symptoms=[
@@ -108,7 +126,8 @@ class CommonDiseases(KnowledgeEngine):
                      Symptom(name='tired', displayValue='Feeling tired.'),
                      Symptom(name='blurred_vision', displayValue='Blurred vision.'),
                      Symptom(name='acetone_breath_smell', displayValue='Smell of acetone on the breath.')
-                 ]),
+                 ],
+                 engine=DiabetesInducedEmergency()),
     ]
     userSymptoms = []
 
@@ -165,3 +184,5 @@ class CommonDiseases(KnowledgeEngine):
                 maxProbability = casualty.probability
                 maxCasualty = casualty
         print(f'Most probability: {maxCasualty.name} with {maxProbability}')
+        maxCasualty.engine.onComplete = onComplete
+        maxCasualty.engine.startEngine()

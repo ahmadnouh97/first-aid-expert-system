@@ -1,5 +1,14 @@
 from models.Casualty import *
 from models.Symptom import *
+from sub_systems.Fractures import *
+from sub_systems.Dislocation import *
+from sub_systems.SpinalInjury import *
+from sub_systems.SeizuresAndEpilepsy import *
+from Data import *
+
+
+def onComplete():
+    printInstructions()
 
 
 class BonesAndMuscles(KnowledgeEngine):
@@ -13,7 +22,8 @@ class BonesAndMuscles(KnowledgeEngine):
                      Symptom(name='abnormal_movement', displayValue='Deformity or abnormal mobility.'),
                      Symptom(name='tenderness and swelling', displayValue='Tenderness and swelling.'),
                      Symptom(name='discoloration_bruising', displayValue='Discolouration and bruising.'),
-                 ]),
+                 ],
+                 engine=Fractures()),
 
         Casualty(name='dislocation',
                  symptoms=[
@@ -24,7 +34,8 @@ class BonesAndMuscles(KnowledgeEngine):
                      Symptom(name='tenderness', displayValue='Tenderness.'),
                      Symptom(name='swelling', displayValue='Swelling.'),
                      Symptom(name='discoloration_bruising', displayValue='Discoloration and bruising.'),
-                 ]),
+                 ],
+                 engine=Dislocation()),
 
         Casualty(name='spinal_injury',
                  symptoms=[
@@ -37,24 +48,26 @@ class BonesAndMuscles(KnowledgeEngine):
                      Symptom(name='dizziness', displayValue='Dizziness.'),
                      Symptom(name='impaired_movement',
                              displayValue='Loss of/or impaired movement below site of injury.')
-                 ]),
+                 ],
+                 engine=SpinalInjury()),
 
-        Casualty(name='seizures_and_epilepsy',
-                 symptoms=[
-                     Symptom(name='muscle_stiffening', displayValue='Sudden spasm of muscles producing stiffness or '
-                                                                    'rhythmic jerking movements. If standing, '
-                                                                    'the casualty will fall which may result in '
-                                                                    'injury.'),
-                     Symptom(name='suddenly_cry_out', displayValue='Suddenly cry out.'),
-                     Symptom(name='difficult_breathing', displayValue='Shallow breathing or breathing may temporarily '
-                                                                      'stop.'),
-                     Symptom(name='pale', displayValue='Pale, blue tinged lips and face.'),
-                     Symptom(name='excessive_saliva_frothing', displayValue='Excessive saliva (frothing) from the '
-                                                                            'mouth.'),
-                     Symptom(name='changes_in_conscious', displayValue='Changes in conscious state from being fully '
-                                                                       'alert to confused, drowsy or loss of '
-                                                                       'consciousness.'),
-                 ]),
+        # Casualty(name='seizures_and_epilepsy',
+        #          symptoms=[
+        #              Symptom(name='muscle_stiffening', displayValue='Sudden spasm of muscles producing stiffness or '
+        #                                                             'rhythmic jerking movements. If standing, '
+        #                                                             'the casualty will fall which may result in '
+        #                                                             'injury.'),
+        #              Symptom(name='suddenly_cry_out', displayValue='Suddenly cry out.'),
+        #              Symptom(name='difficult_breathing', displayValue='Shallow breathing or breathing may temporarily '
+        #                                                               'stop.'),
+        #              Symptom(name='pale', displayValue='Pale, blue tinged lips and face.'),
+        #              Symptom(name='excessive_saliva_frothing', displayValue='Excessive saliva (frothing) from the '
+        #                                                                     'mouth.'),
+        #              Symptom(name='changes_in_conscious', displayValue='Changes in conscious state from being fully '
+        #                                                                'alert to confused, drowsy or loss of '
+        #                                                                'consciousness.'),
+        #          ],
+        #          engine=SeizuresAndEpilepsy()),
 
     ]
     userSymptoms = []
@@ -112,3 +125,5 @@ class BonesAndMuscles(KnowledgeEngine):
                 maxProbability = casualty.probability
                 maxCasualty = casualty
         print(f'Most probability: {maxCasualty.name} with {maxProbability}')
+        maxCasualty.engine.onComplete = onComplete
+        maxCasualty.engine.startEngine()

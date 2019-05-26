@@ -1,5 +1,17 @@
 from models.Casualty import *
 from models.Symptom import *
+from sub_systems.TropicalJellyfishStings import *
+from sub_systems.NonTropicalJellyfishStings import *
+from sub_systems.MarineStings import *
+from sub_systems.InsectBite import *
+from sub_systems.RedBackSpiderBite import *
+from sub_systems.BlueRingedBites import *
+from sub_systems.SnakeBite import *
+from Data import *
+
+
+def onComplete():
+    printInstructions()
 
 
 class StingsAndBites(KnowledgeEngine):
@@ -15,7 +27,8 @@ class StingsAndBites(KnowledgeEngine):
                      Symptom(name='vomiting', displayValue='Vomiting.'),
                      Symptom(name='sweating.', displayValue='Sweating.'),
                      Symptom(name='feeling_of_impending_doom', displayValue='Feeling of impending doom.'),
-                 ]),
+                 ],
+                 engine=TropicalJellyfishStings()),
 
         Casualty(name='non_tropical_jellyfish',
                  symptoms=[
@@ -26,7 +39,8 @@ class StingsAndBites(KnowledgeEngine):
                      Symptom(name='muscle_aches', displayValue='Muscle aches and cramps.'),
                      Symptom(name='nausea', displayValue='Nausea.'),
                      Symptom(name='vomiting', displayValue='Vomiting.'),
-                 ]),
+                 ],
+                 engine=NonTropicalJellyfishStings()),
 
         Casualty(name='marine_stings',
                  symptoms=[
@@ -44,7 +58,8 @@ class StingsAndBites(KnowledgeEngine):
                      Symptom(name='vomiting', displayValue='Vomiting.'),
                      Symptom(name='blurred_vision', displayValue='Blurred vision.'),
                      Symptom(name='headache', displayValue='Headache.')
-                 ]),
+                 ],
+                 engine=MarineStings()),
 
         Casualty(name='insect_bites_and_stings',
                  symptoms=[
@@ -55,7 +70,8 @@ class StingsAndBites(KnowledgeEngine):
                      Symptom(name='difficult_breathing', displayValue='Difficulty in breathing.'),
                      Symptom(name='swallowing', displayValue='Swallowing.'),
                      Symptom(name='itchy_and_painful_blisters', displayValue='Itchy and painful blisters.')
-                 ]),
+                 ],
+                 engine=InsectBite()),
 
         Casualty(name='red_back_spider_bite',
                  symptoms=[
@@ -69,7 +85,8 @@ class StingsAndBites(KnowledgeEngine):
                      Symptom(name='sweating_at_bite_site',
                              displayValue='Profuse sweating, especially at the bite site.'),
                      Symptom(name='swelling', displayValue='Swelling.'),
-                 ]),
+                 ],
+                 engine=RedBackSpiderBite()),
 
         Casualty(name='blue_ringed_octopus_and_cone_shell_bites',
                  symptoms=[
@@ -77,7 +94,8 @@ class StingsAndBites(KnowledgeEngine):
                                                                                         'of blood visible.'),
                      Symptom(name='feeling_of_numbness', displayValue='Numbness to lips and tongue, muscle weakness '
                                                                       'which can stop the casualties breathing.'),
-                 ]),
+                 ],
+                 engine=BlueRingedBites()),
 
         Casualty(name='snake_bite',
                  symptoms=[
@@ -97,7 +115,8 @@ class StingsAndBites(KnowledgeEngine):
                      Symptom(name='chest_tightness', displayValue='Chest tightness.'),
                      Symptom(name='difficult_breathing', displayValue='Difficult breathing.'),
                      Symptom(name='respiratory_weakness_or_arrest', displayValue='respiratory weakness or arrest.'),
-                 ]),
+                 ],
+                 engine=SnakeBite()),
     ]
     userSymptoms = []
 
@@ -155,3 +174,5 @@ class StingsAndBites(KnowledgeEngine):
                 maxProbability = casualty.probability
                 maxCasualty = casualty
         print(f'Most probability: {maxCasualty.name} with {maxProbability}')
+        maxCasualty.engine.onComplete = onComplete
+        maxCasualty.engine.startEngine()

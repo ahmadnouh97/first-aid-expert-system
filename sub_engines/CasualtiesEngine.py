@@ -26,6 +26,7 @@ from sub_systems.HeartAttack import *
 from sub_systems.HeadInjuries import *
 from sub_systems.HeatInducedConditions import *
 from Data import *
+
 # Facts - Start
 
 CASE_DRSABCD = "DRSABCD"
@@ -57,6 +58,8 @@ CASE_EYE_INJURIES = "Eye Injuries"
 CASE_CHOCKING = "Chocking"
 CASE_FRACTURES = "Fractures"
 CASE_HEAD_INJURIES = "Head Injuries"
+
+
 # Facts - End
 
 class Case(Fact):
@@ -144,7 +147,7 @@ class CasualtiesEngine(KnowledgeEngine):
         engine.startEngine()
 
     @Rule(Case("13"))
-    def startSpinalInjury(self):
+    def startSprainsAndStrains(self):
         engine = SprainsAndStrains()
         engine.onComplete = onComplete
         engine.startEngine()
@@ -275,6 +278,5 @@ class CasualtiesEngine(KnowledgeEngine):
     def default(self):
         # print("Error, exiting")
         pass
-
 
 # Engine - End

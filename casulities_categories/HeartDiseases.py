@@ -1,5 +1,13 @@
 from models.Casualty import *
 from models.Symptom import *
+from sub_systems.Shock import *
+from sub_systems.Stroke import *
+from sub_systems.HeartAttack import *
+from Data import *
+
+
+def onComplete():
+    printInstructions()
 
 
 class HeartDiseases(KnowledgeEngine):
@@ -16,7 +24,8 @@ class HeartDiseases(KnowledgeEngine):
                      Symptom(name='dizziness', displayValue='Dizziness.'),
                      Symptom(name='nausea', displayValue='Nausea.'),
                      Symptom(name='pale', displayValue='Pale face, fingernails, lips.')
-                 ]),
+                 ],
+                 engine=Shock()),
 
         Casualty(name='stroke',
                  symptoms=[
@@ -28,7 +37,8 @@ class HeartDiseases(KnowledgeEngine):
                      Symptom(name='dizziness', displayValue='Dizziness, loss of balance, unexplained fall.'),
                      Symptom(name='disturbed_vision', displayValue='Disturbed vision.'),
                      Symptom(name='confused', displayValue='Confusion.')
-                 ]),
+                 ],
+                 engine=Stroke()),
 
         Casualty(name='heart_attack',
                  symptoms=[
@@ -41,7 +51,8 @@ class HeartDiseases(KnowledgeEngine):
                      Symptom(name='feeling_cold', displayValue='Feeling Cold.'),
                      Symptom(name='clammy_skin', displayValue='Clammy skin.'),
                      Symptom(name='cardiac_arrest', displayValue='May collapse and suffer a cardiac arrest.')
-                 ]),
+                 ],
+                 engine=HeartAttack()),
     ]
     userSymptoms = []
 
@@ -98,3 +109,5 @@ class HeartDiseases(KnowledgeEngine):
                 maxProbability = casualty.probability
                 maxCasualty = casualty
         print(f'Most probability: {maxCasualty.name} with {maxProbability}')
+        maxCasualty.engine.onComplete = onComplete
+        maxCasualty.engine.startEngine()

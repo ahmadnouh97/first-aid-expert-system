@@ -142,7 +142,7 @@ class Chocking(KnowledgeEngine):
     def checkIfObstructionCleared(self, is_infant: bool):
         self.reset()
         if is_infant:
-            self.declare(ObstructionClearedInfant('Has the obstruction been cleared ? (yes / no)'))
+            self.declare(ObstructionClearedInfant(input('Has the obstruction been cleared ? (yes / no)')))
         else:
-            self.declare(ObstructionClearedAdult('Has the obstruction been cleared ? (yes / no)'))
+            self.declare(ObstructionClearedAdult(input('Has the obstruction been cleared ? (yes / no)')))
         self.run()
