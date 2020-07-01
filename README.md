@@ -1,2 +1,3 @@
-# el-trio_KBS
-A repository for KBS projects
+# first-aid-expert-system
+
+first aid expert system using pyknow
