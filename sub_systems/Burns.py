@@ -16,23 +16,23 @@ class SeriousSituation(Fact):
 # Fact - End
 
 class Burns(KnowledgeEngine):
-    @Rule(ClothOnFire('yes'))
+    @Rule(ClothOnFire('1'))
     def clothOnFire(self):
         instructions.append('Stop the casualty from moving around.')
         instructions.append('Drop the casualty to the ground and wrap in a blanket or similar.')
         instructions.append('Roll the casualty along the ground until flames are smothered.')
         self.commonInstructions()
 
-    @Rule(ClothOnFire('no'))
+    @Rule(ClothOnFire('2'))
     def clothNotOnFire(self):
         self.commonInstructions()
 
-    @Rule(SeriousSituation('yes'))
+    @Rule(SeriousSituation('1'))
     def seriousSituation(self):
         instructions.append('Call the ambulance')
         self.onComplete()
 
-    @Rule(SeriousSituation('no'))
+    @Rule(SeriousSituation('2'))
     def notSeriousSituation(self):
         self.onComplete()
 
@@ -43,7 +43,7 @@ class Burns(KnowledgeEngine):
 
     def initEngine(self):
         self.reset()
-        self.declare(ClothOnFire(input('Is clothing on fire? (yes / no)')))
+        self.declare(ClothOnFire(input('Is clothing on fire? \n1- Yes\n2- No\n')))
         self.run()
 
     @staticmethod
@@ -71,5 +71,5 @@ class Burns(KnowledgeEngine):
                                             '(10) cent piece on a child.\n'
                                             '- If in any doubt of what to do.\n'
                                             'say (yes):\n'
-                                            '(yes / no)')))
+                                            '1- Yes\n2- No\n')))
         self.run()

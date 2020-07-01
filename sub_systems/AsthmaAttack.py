@@ -12,13 +12,13 @@ class Conscious(Fact):
 # Fact - End
 
 class AsthmaAttack(KnowledgeEngine):
-    @Rule(Conscious('yes'))
+    @Rule(Conscious('1'))
     def conscious(self):
         subEngine = DRSABCD()
         subEngine.onComplete = self.initEngineIfConscious
         subEngine.startEngine()
 
-    @Rule(Conscious('no'))
+    @Rule(Conscious('2'))
     def noConscious(self):
         subEngine = DRSABCD()
         subEngine.onComplete = self.initEngineIfNotConscious
@@ -26,7 +26,7 @@ class AsthmaAttack(KnowledgeEngine):
 
     def startEngine(self):
         self.reset()
-        self.declare(Conscious(input('Is the casualty conscious? (yes / no)')))
+        self.declare(Conscious(input('Is the casualty conscious? \n1- Yes\n2- No\n')))
         self.run()
 
     def initEngineIfConscious(self):

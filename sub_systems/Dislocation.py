@@ -16,27 +16,27 @@ class BloodFlow(Fact):
 # Fact - End
 class Dislocation(KnowledgeEngine):
 
-    @Rule(PlaceOfInjury('limp'))
+    @Rule(PlaceOfInjury('1'))
     def limp(self):
         self.checkBloodFlow()
 
-    @Rule(PlaceOfInjury('shoulder'))
+    @Rule(PlaceOfInjury('2'))
     def shoulder(self):
         instructions.append('Support the casualties arm in position of least discomfort.')
         self.onComplete()
 
-    @Rule(PlaceOfInjury('wrist'))
+    @Rule(PlaceOfInjury('3'))
     def wrist(self):
         instructions.append('Apply a sling in a position of comfort.')
         self.onComplete()
 
-    @Rule(BloodFlow('absent'))
+    @Rule(BloodFlow('1'))
     def bloodFlowAbsent(self):
         instructions.append('- Move limb gently to try and restore it.')
         self.performCommonInstruction()
         self.onComplete()
 
-    @Rule(BloodFlow('not'))
+    @Rule(BloodFlow('2'))
     def bloodFlowNotAbsent(self):
         self.performCommonInstruction()
         self.onComplete()
@@ -59,10 +59,10 @@ class Dislocation(KnowledgeEngine):
 
     def checkPlaceOfInjury(self):
         self.reset()
-        self.declare(PlaceOfInjury(input('What is the location of injury? (limp / shoulder / wrist)')))
+        self.declare(PlaceOfInjury(input('What is the location of injury? \n1- Limp\n2- Shoulder\n3- Wrist\n')))
         self.run()
 
     def checkBloodFlow(self):
         self.reset()
-        self.declare(BloodFlow(input('Check blood flow (absent / not)')))
+        self.declare(BloodFlow(input('Check blood flow \n1- Absent\n2- Not\n')))
         self.run()

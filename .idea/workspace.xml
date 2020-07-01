@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7b468df-700b-4d47-b03c-eb33b4ea472a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casulities_categories/BonesAndMuscles.py" beforeDir="false" afterPath="$PROJECT_DIR$/casulities_categories/BonesAndMuscles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casulities_categories/BurnsCasualties.py" beforeDir="false" afterPath="$PROJECT_DIR$/casulities_categories/BurnsCasualties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casulities_categories/CommonDiseases.py" beforeDir="false" afterPath="$PROJECT_DIR$/casulities_categories/CommonDiseases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casulities_categories/HeartDiseases.py" beforeDir="false" afterPath="$PROJECT_DIR$/casulities_categories/HeartDiseases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casulities_categories/StingsAndBites.py" beforeDir="false" afterPath="$PROJECT_DIR$/casulities_categories/StingsAndBites.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Casualty.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Casualty.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sub_engines/CasualtiesEngine.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_engines/CasualtiesEngine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sub_systems/AsthmaAttack.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_systems/AsthmaAttack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sub_systems/BlueRingedBites.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_systems/BlueRingedBites.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sub_systems/Burns.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_systems/Burns.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sub_systems/Chocking.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_systems/Chocking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sub_systems/SevereAllergicReaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_systems/SevereAllergicReaction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sub_systems/DRSABCDInfant.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_systems/DRSABCDInfant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sub_systems/DiabetesInducedEmergency.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_systems/DiabetesInducedEmergency.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sub_systems/Dislocation.py" beforeDir="false" afterPath="$PROJECT_DIR$/sub_systems/Dislocation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sub_engines/CasualtiesEngine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="186" column="20" lean-forward="true" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
+            <state relative-caret-position="304">
+              <caret line="175" column="14" selection-start-line="175" selection-start-column="14" selection-end-line="175" selection-end-column="14" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -33,11 +30,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sub_systems/Chocking.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sub_systems/BlueRingedBites.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sub_systems/AsthmaAttack.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sub_systems/Burns.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sub_systems/ColdInducedCondition.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
-              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -46,10 +79,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sub_systems/SevereAllergicReaction.py">
+        <entry file="file://$PROJECT_DIR$/sub_systems/DiabetesInducedEmergency.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+            <state relative-caret-position="25">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="30" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -58,10 +91,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sub_systems/SevereBleeding.py">
+        <entry file="file://$PROJECT_DIR$/sub_systems/Dislocation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="184">
+              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -70,10 +103,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sub_systems/Shock.py">
+        <entry file="file://$PROJECT_DIR$/sub_systems/DRSABCD.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="163">
+              <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -82,9 +115,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sub_systems/SnakeBite.py">
+        <entry file="file://$PROJECT_DIR$/sub_systems/DRSABCDInfant.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="232">
+              <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -104,40 +138,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sub_systems/SprainsAndStrains.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sub_systems/TropicalJellyfishStings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sub_systems/Stroke.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -149,10 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>printInstructions</find>
-      <find>DISLOCATION</find>
-      <find>dislocation</find>
-      <find>CASE_SHOCK</find>
       <find>ForeignMaterialAirway</find>
       <find>swelling</find>
       <find>sweating_at_bite_site</find>
@@ -179,6 +175,10 @@
       <find>ConsciousInfant</find>
       <find>consciousInfant</find>
       <find>checkIfObstructionCleared</find>
+      <find>Bur</find>
+      <find>Blue</find>
+      <find>DiabetesInducedEmergency</find>
+      <find>Dislocation</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Ahmad\PycharmProjects\el-trio_KBS</dir>
@@ -195,16 +195,10 @@
         <option value="$PROJECT_DIR$/Data.py" />
         <option value="$PROJECT_DIR$/sub_systems/InsectBites.py" />
         <option value="$PROJECT_DIR$/sub_systems/InsectBite.py" />
-        <option value="$PROJECT_DIR$/sub_systems/AsthmaAttack.py" />
-        <option value="$PROJECT_DIR$/sub_systems/BlueRingedBites.py" />
-        <option value="$PROJECT_DIR$/sub_systems/Burns.py" />
         <option value="$PROJECT_DIR$/sub_systems/ColdInducedCondition.py" />
-        <option value="$PROJECT_DIR$/sub_systems/DiabetesInducedEmergency.py" />
-        <option value="$PROJECT_DIR$/sub_systems/Dislocation.py" />
         <option value="$PROJECT_DIR$/sub_systems/ElectricShock.py" />
         <option value="$PROJECT_DIR$/sub_systems/EyeInjuries.py" />
         <option value="$PROJECT_DIR$/sub_systems/FebrileConvulsions.py" />
-        <option value="$PROJECT_DIR$/sub_systems/DRSABCDInfant.py" />
         <option value="$PROJECT_DIR$/sub_systems/Fractures.py" />
         <option value="$PROJECT_DIR$/sub_systems/HeadInjuries.py" />
         <option value="$PROJECT_DIR$/sub_systems/HeartAttack.py" />
@@ -227,10 +221,16 @@
         <option value="$PROJECT_DIR$/sub_systems/SevereAllergicReaction.py" />
         <option value="$PROJECT_DIR$/sub_engines/CasualtiesEngine.py" />
         <option value="$PROJECT_DIR$/sub_systems/Chocking.py" />
+        <option value="$PROJECT_DIR$/sub_systems/AsthmaAttack.py" />
+        <option value="$PROJECT_DIR$/sub_systems/BlueRingedBites.py" />
+        <option value="$PROJECT_DIR$/sub_systems/Burns.py" />
+        <option value="$PROJECT_DIR$/sub_systems/DiabetesInducedEmergency.py" />
+        <option value="$PROJECT_DIR$/sub_systems/Dislocation.py" />
+        <option value="$PROJECT_DIR$/sub_systems/DRSABCDInfant.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -397,9 +397,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49753696" visible="true" weight="0.24330357" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49753696" visible="true" weight="0.24330357" />
       <window_info id="Structure" order="1" sideWeight="0.50246304" side_tool="true" weight="0.24330357" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -410,7 +409,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.8632479" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22393163" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22393163" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50074404" side_tool="true" weight="0.41734862" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32991454" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -619,16 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sub_systems/ColdInducedCondition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sub_systems/MarineStings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -660,76 +649,6 @@
     <entry file="file://$PROJECT_DIR$/sub_systems/RedBackSpiderBite.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sub_systems/AsthmaAttack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="943">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sub_systems/BlueRingedBites.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sub_systems/Burns.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="70" column="52" lean-forward="true" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sub_systems/DiabetesInducedEmergency.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-373">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sub_systems/Dislocation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sub_systems/DRSABCD.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1196">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sub_systems/DRSABCDInfant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -903,22 +822,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sub_engines/CasualtiesEngine.py">
+    <entry file="file://$PROJECT_DIR$/sub_systems/Chocking.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="186" column="20" lean-forward="true" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
+        <state relative-caret-position="184">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sub_systems/Chocking.py">
+    <entry file="file://$PROJECT_DIR$/sub_systems/AsthmaAttack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="276">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub_systems/BlueRingedBites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub_systems/Burns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub_systems/ColdInducedCondition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub_systems/Dislocation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub_systems/DRSABCD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub_systems/DRSABCDInfant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub_systems/DiabetesInducedEmergency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub_engines/CasualtiesEngine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="175" column="14" selection-start-line="175" selection-start-column="14" selection-end-line="175" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>

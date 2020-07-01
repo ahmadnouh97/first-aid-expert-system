@@ -15,20 +15,21 @@ class ForeignMaterialAirway(Fact):
 class Breathing(Fact):
     pass
 
+
 # Fact - End
 
 class DRSABCDInfant(KnowledgeEngine):
-    @Rule(Response('yes'))
+    @Rule(Response('1'))
     def response(self):
         instructions.append("Make comfortable, monitor response and check for injuries.")
         self.checkForForeignMaterialAirway()
 
-    @Rule(Response('no'))
+    @Rule(Response('2'))
     def noResponse(self):
         instructions.append("Send for help.")
         self.checkForForeignMaterialAirway()
 
-    @Rule(ForeignMaterialAirway('yes'))
+    @Rule(ForeignMaterialAirway('1'))
     def foreignMaterial(self):
         instructions.append("Place infant casualty face down on forearm with head supported, with mouth slightly "
                             "downward.")
@@ -37,19 +38,19 @@ class DRSABCDInfant(KnowledgeEngine):
                             "position.")
         self.checkForBreathing()
 
-    @Rule(ForeignMaterialAirway('no'))
+    @Rule(ForeignMaterialAirway('2'))
     def noForeignMaterial(self):
         instructions.append("Leave casualty in the position that they have been found. Open airway by tilting head "
                             "gently into a neutral position.")
         self.checkForBreathing()
 
-    @Rule(Breathing('normal'))
+    @Rule(Breathing('1'))
     def normalBreathing(self):
         instructions.append("Place infant casualty face down on forearm with head supported, monitor breathing and "
                             "responsiveness, check for and treat any injuries.")
         self.onComplete()
 
-    @Rule(Breathing('abnormal'))
+    @Rule(Breathing('2'))
     def abnormalBreathing(self):
         instructions.append("Place on back on a firm surface. Keep head in neutral position and commence CPR.")
         self.performCPR()
@@ -61,13 +62,13 @@ class DRSABCDInfant(KnowledgeEngine):
 
     def checkForResponse(self):
         self.reset()
-        self.declare(Response(input('Does the infant show any response? (yes / no)')))
+        self.declare(Response(input('Does the infant show any response? \n1- Yes\n2- No\n')))
         self.run()
 
     def checkForForeignMaterialAirway(self):
         self.reset()
         self.declare(
-            ForeignMaterialAirway(input('Is there any foreign material in the infant\'s airway? (yes / no)')))
+            ForeignMaterialAirway(input('Is there any foreign material in the infant\'s airway? \n1- Yes\n2- No\n')))
         self.run()
 
     def checkForBreathing(self):
@@ -75,7 +76,7 @@ class DRSABCDInfant(KnowledgeEngine):
         self.declare(
             Breathing(input('Check for breathing—Look and feel for chest movement, listen for air escaping from '
                             'mouth and nose (an occasional gasp is not adequate for normal breathing)\n'
-                            'Is breathing normal? (normal / abnormal)')))
+                            'Is breathing normal? \n1- Normal\n2- Abnormal\n')))
         self.run()
 
     @staticmethod

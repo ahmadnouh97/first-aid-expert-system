@@ -11,7 +11,7 @@ class BiteOnLimp(Fact):
 # Fact - End
 
 class BlueRingedBites(KnowledgeEngine):
-    @Rule(BiteOnLimp('yes'))
+    @Rule(BiteOnLimp('1'))
     def bitOnLimp(self):
         instructions.append('apply a firm broad crepe or elasticised roller bandage starting just above the fingers '
                             'or toes, and moving upwards on the bitten limb as far as can be reached and immobilise '
@@ -21,7 +21,7 @@ class BlueRingedBites(KnowledgeEngine):
         instructions.append('Prepare to perform cardiopulmonary resuscitation (CPR) if necessary.')
         self.onComplete()
 
-    @Rule(BiteOnLimp('no'))
+    @Rule(BiteOnLimp('2'))
     def bitIsNotOnLimp(self):
         instructions.append('Monitor casualty closely for signs of adverse reactions or deterioration.')
         instructions.append('Call the ambulance')
@@ -39,5 +39,5 @@ class BlueRingedBites(KnowledgeEngine):
 
     def checkIfBiteOnLimp(self):
         self.reset()
-        self.declare(BiteOnLimp(input('Is the bite on a limb? (yes / no)')))
+        self.declare(BiteOnLimp(input('Is the bite on a limb? \n1- Yes\n2- No\n')))
         self.run()
